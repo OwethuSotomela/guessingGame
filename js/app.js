@@ -2,24 +2,40 @@ var selectNum = document.querySelector(".selectNumber");
 var feedbackElem = document.querySelector(".feedback");
 var guessBtn = document.querySelector(".guessBtn");
 
-function randomNum() {
-    let randomNumber = Math.ceil((Math.random() * 100))
-    if (randomNumber >= anyNumber) {
-        return "Your guess is too high!"
-    }
-    if (randomNumber <= anyNumber) {
-        return "Your guess is too low!"
-    }
-    return 'Correct, the secret number is ${number}'
-}
+var playerGuess;
+var numberGuessed;
+var message = "";
 
+let randomNumber = Math.ceil((Math.random() * 100))
+
+function randomNum() {
+    if (document.querySelector(".selectNum").value != null) {
+        numberGuessed = document.querySelector(".selectNum").value;
+    }
+
+    if (numberGuessed > randomNumber) {
+        return "Your guess is too high.."
+    }
+    if (numberGuessed < randomNumber) {
+        return "Your guess is too low.."
+    }
+    else
+        return `Correct, the secret number is ${randomNumber}`
+}
 
 function anyNumber() {
     if (document.querySelector(".selectNum").value != null) {
         numberGuessed = document.querySelector(".selectNum").value;
     }
     console.log(numberGuessed);
-    document.querySelector(".feedback").innerHTML = "TestingDisplay";
 }
 
-guessBtn.addEventListener("click", anyNumber)
+function game() {
+    anyNumber()
+    if (numberGuessed != undefined) {
+        document.querySelector(".display").innerHTML = randomNum();
+        console.log(randomNumber)
+    }
+}
+
+guessBtn.addEventListener("click", game)
