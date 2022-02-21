@@ -1,9 +1,6 @@
 var selectNum = document.querySelector(".selectNumber");
-var selectedNum = document.querySelector(".selectedNum");
-var feedbacElem = document.querySelector(".feedback");
-
-let anyNumber = document.getElementById(".selectNum").value;
-console.log(anyNumber);
+var feedbackElem = document.querySelector(".feedback");
+var guessBtn = document.querySelector(".guessBtn");
 
 function randomNum() {
     let randomNumber = Math.ceil((Math.random() * 100))
@@ -17,5 +14,12 @@ function randomNum() {
 }
 
 
+function anyNumber() {
+    if (document.querySelector(".selectNum").value != null) {
+        numberGuessed = document.querySelector(".selectNum").value;
+    }
+    console.log(numberGuessed);
+    document.querySelector(".feedback").innerHTML = "TestingDisplay";
+}
 
-
+guessBtn.addEventListener("click", anyNumber)
