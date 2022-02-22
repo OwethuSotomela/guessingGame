@@ -4,7 +4,6 @@ var guessBtn = document.querySelector(".guessBtn");
 
 var playerGuess;
 var numberGuessed;
-var message = "";
 
 let randomNumber = Math.ceil((Math.random() * 100))
 
@@ -27,7 +26,8 @@ function anyNumber() {
     if (document.querySelector(".selectNum").value != null) {
         numberGuessed = document.querySelector(".selectNum").value;
     }
-    console.log(numberGuessed);
+    // console.log(numberGuessed);`
+    document.querySelector(".feedback").innerHTML = numberGuessed;
 }
 
 function game() {
