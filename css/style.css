@@ -11,6 +11,12 @@ h1{
     font-size: 40;
     text-shadow:  2px 2px 5px aqua;
 }
+.errors{
+    text-align: center;
+    color: red;
+    font-size: 40;
+    text-shadow:  2px 2px 5px red;
+}
 
 .feedback{
     text-align: center;
@@ -30,7 +36,6 @@ p{
 .numberGuessed{
     color: yellow;
     text-shadow:  2px 2px 5px yellow;
-
 }
 .align{
     display: flex;

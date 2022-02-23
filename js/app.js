@@ -32,18 +32,33 @@ function anyNumber() {
 
 function game() {
     anyNumber()
-    if (numberGuessed != undefined) {
-        document.querySelector(".display").innerHTML = randomNum();
-        console.log(randomNumber)
+    if (numberGuessed < 1) {
+        document.querySelector(".errors").innerHTML = "Enter any number above 1..";
+        document.querySelector(".feedback").innerHTML = "";
     }
-    if (numberGuessed == randomNumber) {
-        setTimeout(function () {
-            location.reload()
-        }, 5000);
-        setTimeout(function () {
-            document.querySelector(".popUp").innerHTML = "New Game Started!"
-        }, 3000);
+    if (numberGuessed > 100) {
+        document.querySelector(".errors").innerHTML = "Enter any number below 100..";
+        document.querySelector(".feedback").innerHTML = "";
     }
+    else {
+        if (numberGuessed != undefined) {
+            document.querySelector(".display").innerHTML = randomNum();
+            console.log(randomNumber)
+            setTimeout(function () {
+                document.querySelector(".display").innerHTML = "";
+                document.querySelector(".feedback").innerHTML = "";
+            }, 2000);
+        }
+        if (numberGuessed == randomNumber) {
+            setTimeout(function () {
+                location.reload()
+            }, 5000);
+            setTimeout(function () {
+                document.querySelector(".popUp").innerHTML = "New Game Started!"
+            }, 3000);
+        }
+    }
+
 }
 
 guessBtn.addEventListener("click", game)
