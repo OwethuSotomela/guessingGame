@@ -26,6 +26,7 @@ function anyNumber() {
     if (document.querySelector(".selectNum").value != null) {
         numberGuessed = document.querySelector(".selectNum").value;
     }
+    console.log(numberGuessed)
     document.querySelector(".feedback").innerHTML = numberGuessed;
 }
 
@@ -35,6 +36,16 @@ function game() {
         document.querySelector(".display").innerHTML = randomNum();
         console.log(randomNumber)
     }
+    if (numberGuessed == randomNumber) {
+        setTimeout(function () {
+            location.reload()
+        }, 5000);
+        setTimeout(function () {
+            document.querySelector(".popUp").innerHTML = "New Game Started!"
+        }, 3000);
+    }
+
 }
+
 
 guessBtn.addEventListener("click", game)

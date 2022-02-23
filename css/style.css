@@ -1,32 +1,65 @@
-.heading{
-    margin-top: 5px;
+h5{
+    text-align: center;
+}
+
+.popUp{
+    text-align: center;
+    color: #4CAF50;
 }
 
 .feedback{
     text-align: center;
-    border: 1px solid black;
+    border: 1px solid #008CBA;
     border-radius: 3px;
 }
 p{
-    font-size: 4px;
+    font-size: 15px;
 }
-.selectNum{
-    height: 9px;
-}
-.guessBtn{
-    height: 12px;
-}
-
 .display{
-    text-align: center;
-    color: purple;
-    font-size: 10px;
-    margin-left: 25px;
-    margin-top: 95px;
+    color: #00FFFF;
+    font-size: 15px;
+}
+.col{
+    border: 1px solid  black;
+}
+.align{
+    display: flex;
+    flex-direction: row;
 }
 .row{
-    border: 1px solid purple;
-    margin-top: 5px;
-    margin-left: 5px;
-    margin-right: 5px;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
+.container{
+    border: 2px solid black;
+    border-radius: 12px;
+}
+.selectNum{
+    border: 1px solid #008CBA;
+    color: black;
+    padding: 16px 32px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.guessBtn {
+    background-color: #008CBA; 
+    border: none;
+    color: white;
+    padding: 16px 32px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
