@@ -16,17 +16,17 @@ p{
 .guessBtn{
     height: 12px;
 }
-.container{
-    border: 1px solid yellow;
-}
-.feedback{
-    /* border: purple; */
-}
+
 .display{
     text-align: center;
     color: purple;
     font-size: 10px;
     margin-left: 25px;
     margin-top: 95px;
-
+}
+.row{
+    border: 1px solid purple;
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
 }

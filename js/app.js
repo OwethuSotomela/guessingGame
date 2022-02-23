@@ -26,7 +26,6 @@ function anyNumber() {
     if (document.querySelector(".selectNum").value != null) {
         numberGuessed = document.querySelector(".selectNum").value;
     }
-    // console.log(numberGuessed);`
     document.querySelector(".feedback").innerHTML = numberGuessed;
 }
 
