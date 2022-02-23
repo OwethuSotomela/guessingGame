@@ -44,8 +44,6 @@ function game() {
             document.querySelector(".popUp").innerHTML = "New Game Started!"
         }, 3000);
     }
-
 }
-
 
 guessBtn.addEventListener("click", game)

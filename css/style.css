@@ -42,7 +42,7 @@ p{
     border: 2px solid black;
     border-radius: 12px;
     box-shadow: 0 20px 25px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-    background-image:url(../css/images/gp3.jpeg);
+    background-image:url(../images/gp3.jpeg);
     background-size:cover;
     background-repeat: no-repeat;
 }
