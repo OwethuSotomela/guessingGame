@@ -4,8 +4,8 @@ h1{
 
 .popUp{
     text-align: center;
-    color: #4CAF50;
-    font-size: 25;
+    color: white;
+    font-size: 40;
     text-shadow:  2px 2px 5px aqua;
 }
 
@@ -24,6 +24,9 @@ p{
 .col{
     border: 1px solid  black;
 }
+.numberGuessed{
+    color: white;
+}
 .align{
     display: flex;
     flex-direction: row;
@@ -36,13 +39,12 @@ p{
     text-align: center;
     background-position: center center;
     background-repeat: no-repeat;
-    
 }
 .container{
     border: 2px solid black;
     border-radius: 12px;
     box-shadow: 0 20px 25px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-    background-image:url(../images/gp3.jpeg);
+    background-image:url(../images/gp4.jpeg);
     background-size:cover;
     background-repeat: no-repeat;
 }
