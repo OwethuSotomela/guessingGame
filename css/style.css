@@ -1,5 +1,8 @@
 h1{
     text-align: center;
+    color: white;
+    text-shadow:  2px 2px 5px aqua;
+    padding-top: 50px;
 }
 
 .popUp{
@@ -13,6 +16,7 @@ h1{
     text-align: center;
     border: 1px solid #008CBA;
     border-radius: 3px;
+    color: white;
 }
 p{
     font-size: 15px;
@@ -20,9 +24,6 @@ p{
 .display{
     color: #00FFFF;
     font-size: 20px;
-}
-.col{
-    border: 1px solid  black;
 }
 .numberGuessed{
     color: white;
