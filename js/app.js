@@ -35,35 +35,35 @@ function game() {
     if (numberGuessed < 1) {
         document.querySelector(".errors").innerHTML = "Enter any number above 0..";
         document.querySelector(".feedback").innerHTML = "";
-        setTimeout(function(){
+        setTimeout(function () {
             location.reload()
         }, 3000);
-    }
-    if (numberGuessed > 100) {
-        document.querySelector(".errors").innerHTML = "Enter any number below 100..";
-        document.querySelector(".feedback").innerHTML = "";
-        setTimeout(function(){
-            location.reload()
-            }, 3000);
-    }
-    else {
-        if (numberGuessed != undefined) {
-            document.querySelector(".display").innerHTML = randomNum();
-            console.log(randomNumber)
-            setTimeout(function () {
-                document.querySelector(".display").innerHTML = "";
-                document.querySelector(".feedback").innerHTML = "";
-            }, 2000);
-        }
-        if (numberGuessed == randomNumber) {
+    } else
+        if (numberGuessed > 100) {
+            document.querySelector(".errors").innerHTML = "Enter any number below 100..";
+            document.querySelector(".feedback").innerHTML = "";
             setTimeout(function () {
                 location.reload()
-            }, 5000);
-            setTimeout(function () {
-                document.querySelector(".popUp").innerHTML = "New Game Started!"
             }, 3000);
         }
-    }
+        else {
+            if (numberGuessed != undefined) {
+                document.querySelector(".display").innerHTML = randomNum();
+                console.log(randomNumber)
+                setTimeout(function () {
+                    document.querySelector(".display").innerHTML = "";
+                    document.querySelector(".feedback").innerHTML = "";
+                }, 2000);
+            }
+            if (numberGuessed == randomNumber) {
+                setTimeout(function () {
+                    location.reload()
+                }, 5000);
+                setTimeout(function () {
+                    document.querySelector(".popUp").innerHTML = "New Game Started!"
+                }, 3000);
+            }
+        }
 
 }
 
