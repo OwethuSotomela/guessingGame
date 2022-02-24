@@ -33,7 +33,7 @@ function anyNumber() {
 function game() {
     anyNumber()
     if (numberGuessed < 1) {
-        document.querySelector(".errors").innerHTML = "Enter any number above 1..";
+        document.querySelector(".errors").innerHTML = "Enter any number above 0..";
         document.querySelector(".feedback").innerHTML = "";
     }
     if (numberGuessed > 100) {
