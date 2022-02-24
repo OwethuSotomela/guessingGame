@@ -1,6 +1,6 @@
 # Guessing-Game
 
-[Guessing-Game](https://owethusotomela.github.io/guessingGame/)
+[Play Guessing-Game](https://owethusotomela.github.io/guessingGame/)
 
 
 Create a guessing game that gives users the chance to guess a number between 1 and 100.
