@@ -35,10 +35,16 @@ function game() {
     if (numberGuessed < 1) {
         document.querySelector(".errors").innerHTML = "Enter any number above 0..";
         document.querySelector(".feedback").innerHTML = "";
+        setTimeout(function(){
+            location.reload()
+        }, 3000);
     }
     if (numberGuessed > 100) {
         document.querySelector(".errors").innerHTML = "Enter any number below 100..";
         document.querySelector(".feedback").innerHTML = "";
+        setTimeout(function(){
+            location.reload()
+            }, 3000);
     }
     else {
         if (numberGuessed != undefined) {
