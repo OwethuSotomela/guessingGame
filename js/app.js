@@ -2,7 +2,7 @@ var selectNum = document.querySelector(".selectNumber");
 var feedbackElem = document.querySelector(".feedback");
 var guessBtn = document.querySelector(".guessBtn");
 
-var playerGuess;
+// var playerGuess;
 var numberGuessed;
 
 let randomNumber = Math.ceil((Math.random() * 100))
