@@ -31,7 +31,7 @@ Installation
 
 Demo
 
-<ul> You can play the game live here [Play Guessing-Game](https://owethusotomela.github.io/guessingGame/).</ul>
+<ul> You can play the game live here [Play Guessing-Game](https://owethusotomela.github.io/guessingGame/) .</ul>
 
 Feedback
 
