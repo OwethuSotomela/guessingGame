@@ -1,17 +1,38 @@
-# Guessing-Game
+# Guessing Game
 
 [Play Guessing-Game](https://owethusotomela.github.io/guessingGame/)
 
+Welcome to the Guessing Game! This is a simple web-based game where users can guess a number between 1 and 100.
 
-* Create a guessing game that gives users the chance to guess a number between 1 and 100.
+Features
 
-* If the guess is too low show : Your guess is too low Or if too high show the message Your guess is too high If the correct number is guessed show this message: Correct, the secret number is ${number}.
+* Interactive Gameplay: Users can input their guesses and receive feedback on whether their guess is too high, too low, or correct.
+* User-Friendly Interface: The game provides clear instructions and visual cues to enhance the user experience.
+* Responsive Design: The game is designed to work seamlessly across various devices and screen sizes.
 
-* A new number should be generated 5 seconds after a successfull guess.
+How to Play
 
-* Show a message stating: New game started! I should stay on the screen for 3 seconds.
+1. Open the game in your web browser.
+2. Enter your guess in the input field provided.
+3. Click the "Play" button to submit your guess.
+4. Receive feedback on whether your guess is too high, too low, or correct.
+5. Keep guessing until you correctly guess the secret number!
 
-* If the widget is refreshed a new secret number is created.
+Technologies Used
 
-* Create a random secret number using let randomNumber = Math.ceil(    (Math.random() * 100))
+* HTML5
+* CSS3
+* JavaScript
 
+Installation
+
+1. Clone the repository to your local machine.
+2. Open the index.html file in your web browser.
+
+Demo
+
+You can play the game live here ([Play Guessing-Game](https://owethusotomela.github.io/guessingGame/)).
+
+Feedback
+
+If you have any feedback or suggestions, please open an issue 
