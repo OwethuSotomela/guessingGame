@@ -3,7 +3,8 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
+    /* background-color: #f5f5f5; */
+    background: linear-gradient(to right, #FFA07A, #FF6347);
 }
 
 .container {
@@ -33,10 +34,12 @@ h1 {
     display: flex;
     justify-content: center;
 }
-.align{
+
+.align {
     padding: 5px;
     margin-bottom: -2em;
 }
+
 .col-12 {
     width: 100%;
 }
@@ -49,11 +52,11 @@ label {
 #selectNum {
     height: 2.3em;
     width: 50%;
-    padding: 5px; 
+    padding: 5px;
 }
 
 .guessBtn {
-    background-color: #007bff;
+    background-color: #4CAF50;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -84,6 +87,7 @@ label {
     font-weight: 500;
     font-style: normal;
 }
+
 /* New  */
 
 .errors {
