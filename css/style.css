@@ -8,11 +8,13 @@ body {
 }
 
 .container {
-    max-width: 40%;
-    margin: 10em auto;
+    max-width: 90%;
+    width: 100%;
+    margin: 5em auto;
     padding: 20px;
     background-color: #fff;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
 }
 
 h1 {
@@ -35,11 +37,6 @@ h1 {
     justify-content: center;
 }
 
-.align {
-    padding: 5px;
-    margin-bottom: -2em;
-}
-
 .col-12 {
     width: 100%;
 }
@@ -49,21 +46,21 @@ label {
     margin-bottom: 10px;
 }
 
+.align {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
 #selectNum {
-    height: 2.3em;
-    width: 50%;
-    padding: 5px;
+    width: 100%;
+    max-width: 300px;
 }
 
 .guessBtn {
-    background-color: #4CAF50;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 3px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    font-size: 16px;
+    width: 100%;
+    max-width: 150px;
 }
 
 .guessBtn:hover {
@@ -97,11 +94,22 @@ label {
     text-shadow: 2px 2px 5px red;
 }
 
-
 .feedback.low {
     color: orange;
 }
 
 .feedback.high {
     color: red;
+}
+
+@media (min-width: 768px) {
+    .align {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    #selectNum, .guessBtn {
+        max-width: none;
+        width: auto;
+    }
 }
