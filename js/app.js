@@ -14,6 +14,7 @@ function resetGame() {
     guessHistory = [];
     selectNum.value = "";
     feedbackElem.textContent = "";
+    feedbackElem.className = "feedback";
     errors.textContent = "";
     popUp.innerHTML = "";
     selectNum.disabled = false;
@@ -24,14 +25,13 @@ function game() {
     const userValue = parseInt(selectNum.value);
     errors.textContent = "";
 
-    // Validate input
     if (isNaN(userValue)) {
-        errors.textContent = "Please enter a valid number.";
+        errors.textContent = "⚠️ Please enter a valid number.";
         return;
     }
 
     if (userValue < 1 || userValue > 100) {
-        errors.textContent = "Please enter a number between 1 and 100.";
+        errors.textContent = "⚠️ Number must be between 1 and 100.";
         return;
     }
 
@@ -40,37 +40,22 @@ function game() {
 
     if (userValue > randomNumber) {
         feedbackElem.className = "feedback high";
-        feedbackElem.textContent = "Your guess is too high!";
+        feedbackElem.textContent = "⬆️ Too high! Try again.";
     } else if (userValue < randomNumber) {
         feedbackElem.className = "feedback low";
-        feedbackElem.textContent = "Your guess is too low!";
+        feedbackElem.textContent = "⬇️ Too low! Try again.";
     } else {
-        feedbackElem.className = "feedback";
-        feedbackElem.textContent = `🎉 Correct! The secret number was ${randomNumber}. You guessed it in ${guessCount} tries.`;
+        feedbackElem.className = "feedback correct";
+        feedbackElem.textContent = `🎉 Correct! You guessed it in ${guessCount} attempts.`;
 
         selectNum.disabled = true;
         guessBtn.disabled = true;
 
         popUp.innerHTML = `
-            <button class="play-again">Play Again</button>
+            <button class="play-again">🔁 Play Again</button>
+            <p><strong>Your guesses:</strong> ${guessHistory.join(', ')}</p>
         `;
         document.querySelector(".play-again").addEventListener("click", resetGame);
-    }
-
-    setTimeout(() => {
-        displayGuessHistory();
-    }, 500);
-}
-
-function displayGuessHistory() {
-    if (guessHistory.length > 0) {
-        popUp.innerHTML = `
-            <p><strong>Your guesses:</strong> ${guessHistory.join(", ")}</p>
-        `;
-        if (selectNum.disabled) {
-            popUp.innerHTML += `<button class="play-again">Play Again</button>`;
-            document.querySelector(".play-again").addEventListener("click", resetGame);
-        }
     }
 }
 
