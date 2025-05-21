@@ -1,111 +1,55 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
-
 body {
-    font-family: 'Montserrat', sans-serif;
-    background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #e0eafc, #cfdef3);
+  text-align: center;
+  padding: 50px;
 }
-
 .container {
-    background: white;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    padding: 3em;
-    max-width: 500px;
-    width: 100%;
-    text-align: center;
+  max-width: 400px;
+  background: #fff;
+  margin: auto;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
 }
-
 h1 {
-    font-size: 2.2rem;
-    margin-bottom: 1em;
-    color: #333;
+  color: #333;
+  margin-bottom: 20px;
 }
-
-input[type="number"] {
-    padding: 10px;
-    font-size: 18px;
-    width: 80%;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    outline: none;
-    margin-bottom: 1em;
-    text-align: center;
+select, input {
+  padding: 10px;
+  font-size: 16px;
+  width: 100%;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
 }
-
-.guessBtn {
-    padding: 12px 25px;
-    font-size: 16px;
-    background: #007bff;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background 0.3s ease;
+.guessBtn, .play-again, #hintBtn {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+  background: #28a745;
+  color: white;
+  transition: background 0.3s ease;
 }
-
-.guessBtn:hover {
-    background: #0056b3;
+.guessBtn:hover, .play-again:hover, #hintBtn:hover {
+  background: #218838;
 }
-
 .feedback {
-    font-size: 20px;
-    margin-top: 1em;
-    padding: 15px;
-    border-radius: 10px;
-    font-weight: 600;
-    animation: fadeIn 0.4s ease-in-out;
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: bold;
 }
-
-.feedback.low {
-    color: #ff9800;
-}
-
-.feedback.high {
-    color: #f44336;
-}
-
-.feedback.correct {
-    color: #4caf50;
-}
-
+.feedback.high { color: #dc3545; }
+.feedback.low { color: #ffc107; }
+.feedback.correct { color: #28a745; }
 .errors {
-    color: red;
-    font-weight: bold;
-    margin-bottom: 10px;
+  color: #dc3545;
+  margin-top: 10px;
 }
-
-.popUp {
-    margin-top: 20px;
-}
-
-.play-again {
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #28a745;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-}
-
-.play-again:hover {
-    background-color: #218838;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: scale(0.95);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
+.popUp, #leaderboard {
+  margin-top: 20px;
 }
