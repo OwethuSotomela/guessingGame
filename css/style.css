@@ -1,55 +1,130 @@
+/* Reset some mobile quirks */
+html {
+    font-size: 16px;
+}
+
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(to right, #e0eafc, #cfdef3);
-  text-align: center;
-  padding: 50px;
+    font-family: "Roboto", sans-serif;
+    background: linear-gradient(to right, #FFA07A, #FF6347);
+    margin: 0;
+    padding: 0;
 }
+
 .container {
-  max-width: 400px;
-  background: #fff;
-  margin: auto;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    max-width: 500px;
+    margin: 5em auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
 }
+
 h1 {
-  color: #333;
-  margin-bottom: 20px;
+    text-align: center;
+    font-family: "Playfair Display", serif;
+    font-weight: 600;
+    color: #333;
+    font-size: 2rem;
 }
-select, input {
-  padding: 10px;
-  font-size: 16px;
-  width: 100%;
-  margin-bottom: 15px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
+
+.align {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    margin-top: 1em;
 }
-.guessBtn, .play-again, #hintBtn {
-  padding: 10px 20px;
-  font-size: 16px;
-  border: none;
-  border-radius: 5px;
-  margin-top: 10px;
-  cursor: pointer;
-  background: #28a745;
-  color: white;
-  transition: background 0.3s ease;
+
+#selectNum {
+    width: 100%;
+    max-width: 300px;
+    font-size: 1rem;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
 }
-.guessBtn:hover, .play-again:hover, #hintBtn:hover {
-  background: #218838;
+
+.guessBtn {
+    width: 150px;
+    padding: 10px;
+    font-size: 1rem;
+    background-color: #007BFF;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
+
+.guessBtn:hover {
+    background-color: #0056b3;
+}
+
 .feedback {
-  margin-top: 15px;
-  font-size: 18px;
-  font-weight: bold;
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 2em;
+    padding: 12px;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: all 0.3s ease;
 }
-.feedback.high { color: #dc3545; }
-.feedback.low { color: #ffc107; }
-.feedback.correct { color: #28a745; }
+
+.feedback.low {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.feedback.high {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.feedback.correct {
+    background-color: #d4edda;
+    color: #155724;
+}
+
 .errors {
-  color: #dc3545;
-  margin-top: 10px;
+    text-align: center;
+    color: red;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    text-shadow: 1px 1px 2px red;
 }
-.popUp, #leaderboard {
-  margin-top: 20px;
+
+.popUp {
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 1em;
+    color: #333;
+}
+
+/* Prevent input zoom on iOS */
+input[type="number"] {
+    font-size: 16px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        margin: 2em 1em;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .guessBtn {
+        width: 100%;
+    }
+
+    #selectNum {
+        width: 100%;
+    }
+
+    .feedback {
+        font-size: 1rem;
+    }
 }
