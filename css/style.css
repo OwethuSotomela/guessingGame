@@ -1,131 +1,111 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 body {
-    font-family: Arial, sans-serif;
-    /* background-color: #f5f5f5; */
-    background: linear-gradient(to right, #FFA07A, #FF6347);
-}
-
-.container {
-    max-width: 90%;
-    width: 100%;
-    margin: 5em auto;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-}
-
-h1 {
-    text-align: center;
-    color: #333;
-    font-family: "Playfair Display", serif;
-    font-optical-sizing: auto;
-    font-weight: 500;
-    font-style: normal;
-}
-
-.errors {
-    text-align: center;
-    color: red;
-    margin-bottom: 20px;
-}
-
-.row {
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+    margin: 0;
+    padding: 0;
+    height: 100vh;
     display: flex;
+    align-items: center;
     justify-content: center;
 }
 
-.col-12 {
+.container {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    padding: 3em;
+    max-width: 500px;
     width: 100%;
+    text-align: center;
 }
 
-label {
-    display: block;
-    margin-bottom: 10px;
+h1 {
+    font-size: 2.2rem;
+    margin-bottom: 1em;
+    color: #333;
 }
 
-.align {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
-}
-
-#selectNum {
-    width: 100%;
-    max-width: 300px;
+input[type="number"] {
+    padding: 10px;
+    font-size: 18px;
+    width: 80%;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+    margin-bottom: 1em;
+    text-align: center;
 }
 
 .guessBtn {
-    width: 100%;
-    max-width: 150px;
+    padding: 12px 25px;
+    font-size: 16px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
 }
 
 .guessBtn:hover {
-    background-color: #0056b3;
+    background: #0056b3;
 }
 
 .feedback {
-    text-align: center;
-    font-size: 18px;
-    margin-top: 3em;
-    padding: 10px;
-    background-color: #f0f0f0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.numberGuessed {
-    font-family: 'Roboto', sans-serif;
-    font-size: large;
-    font-family: "Playfair Display", serif;
-    font-optical-sizing: auto;
-    font-weight: 500;
-    font-style: normal;
-}
-
-/* New  */
-
-.errors {
-    text-align: center;
-    color: red;
-    font-size: 40;
-    text-shadow: 2px 2px 5px red;
+    font-size: 20px;
+    margin-top: 1em;
+    padding: 15px;
+    border-radius: 10px;
+    font-weight: 600;
+    animation: fadeIn 0.4s ease-in-out;
 }
 
 .feedback.low {
-    color: orange;
+    color: #ff9800;
 }
 
 .feedback.high {
+    color: #f44336;
+}
+
+.feedback.correct {
+    color: #4caf50;
+}
+
+.errors {
     color: red;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.popUp {
+    margin-top: 20px;
 }
 
 .play-again {
     margin-top: 20px;
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #4CAF50;
+    background-color: #28a745;
     color: white;
     border: none;
     border-radius: 6px;
     cursor: pointer;
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
 }
 
 .play-again:hover {
-    background-color: #45a049;
+    background-color: #218838;
 }
 
-@media (min-width: 768px) {
-    .align {
-        flex-direction: row;
-        justify-content: center;
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
     }
-
-    #selectNum, .guessBtn {
-        max-width: none;
-        width: auto;
+    to {
+        opacity: 1;
+        transform: scale(1);
     }
 }
