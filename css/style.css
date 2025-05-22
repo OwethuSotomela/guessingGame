@@ -1,159 +1,78 @@
-* {
-  box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
-}
-
 body {
+  font-family: 'Segoe UI', sans-serif;
   margin: 0;
-  padding: 20px;
-  background: linear-gradient(to bottom right, #e0f7fa, #fce4ec);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+  padding: 0;
+  background-color: #121212;
+  color: #f1f1f1;
 }
 
 .container {
-  background: white;
-  padding: 20px;
-  border-radius: 12px;
   max-width: 500px;
-  width: 100%;
-  box-shadow: 0 0 15px rgba(0,0,0,0.1);
-}
-
-h1 {
+  margin: auto;
+  padding: 2rem;
   text-align: center;
-  color: #2e7d32;
 }
 
-.controls,
-.input-section {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 10px 0;
-  flex-wrap: wrap;
-}
-
-.input-section input {
-  flex: 1;
+input[type="number"] {
   padding: 10px;
-  margin-right: 10px;
-  font-size: 1rem;
+  font-size: 1.2rem;
+  width: 60%;
+  border: none;
+  border-radius: 5px;
+  margin: 10px 0;
 }
 
 button {
   padding: 10px 15px;
-  margin-top: 10px;
   font-size: 1rem;
-  cursor: pointer;
-  border: none;
+  margin: 5px;
   border-radius: 5px;
-  transition: background 0.2s ease;
+  border: none;
+  background-color: #1e88e5;
+  color: white;
+  cursor: pointer;
 }
 
 button:hover {
-  opacity: 0.9;
-}
-
-button.guessBtn {
-  background-color: #00796b;
-  color: white;
-}
-
-#hintBtn {
-  background-color: #f9a825;
-  color: white;
-}
-
-#toggleSound {
-  background-color: #5c6bc0;
-  color: white;
-  width: 100%;
-}
-
-#showAnswer {
-  background-color: #d84315;
-  color: white;
-  width: 100%;
+  background-color: #1565c0;
 }
 
 .feedback {
-  margin-top: 10px;
-  padding: 10px;
   font-weight: bold;
-  text-align: center;
-  border-radius: 8px;
-}
-
-.feedback.correct {
-  background-color: #c8e6c9;
-  color: #2e7d32;
-}
-
-.feedback.high {
-  background-color: #ffccbc;
-  color: #d84315;
+  margin-top: 1rem;
 }
 
 .feedback.low {
-  background-color: #bbdefb;
-  color: #1565c0;
+  color: #ff9800;
+}
+
+.feedback.high {
+  color: #f44336;
+}
+
+.feedback.correct {
+  color: #4caf50;
 }
 
 .errors {
-  color: #e53935;
-  text-align: center;
-  margin: 5px 0;
+  color: #ff5252;
 }
 
 .popUp {
-  margin-top: 20px;
-  text-align: center;
-}
-
-.popUp input {
-  padding: 10px;
-  margin: 10px auto;
-  width: 80%;
-  display: block;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.popUp button {
-  background-color: #26a69a;
-  color: white;
+  margin-top: 1rem;
 }
 
 #leaderboard {
-  margin-top: 20px;
+  margin-top: 2rem;
+  text-align: left;
 }
 
-#leaderboard h4 {
-  text-align: center;
-  color: #333;
-}
-
-#leaderboard p {
-  text-align: center;
-  margin: 4px 0;
-  font-size: 0.95rem;
-}
-
-/* Responsive */
-@media screen and (max-width: 500px) {
-  .controls, .input-section {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .input-section input {
-    margin: 0 0 10px 0;
-  }
-
-  button {
-    width: 100%;
-  }
+.lang-switch button {
+  background: transparent;
+  border: 1px solid #f1f1f1;
+  color: #f1f1f1;
+  margin: 3px;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
 }
