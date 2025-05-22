@@ -3,37 +3,43 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Guess the Number Game</title>
-  <link rel="stylesheet" href="styles.css" />
+  <title>🎯 Number Guesser</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="container">
-    <h1>🎯 Guess the Number</h1>
+    <h1>🎯 Number Guesser</h1>
 
-    <label for="difficulty"><strong>Difficulty:</strong></label>
-    <select id="difficulty">
-      <option value="50">Easy (1–50)</option>
-      <option value="100" selected>Normal (1–100)</option>
-      <option value="200">Hard (1–200)</option>
-    </select>
+    <div class="controls">
+      <label for="difficulty">Select Difficulty:</label>
+      <select id="difficulty">
+        <option value="10">Easy (1-10)</option>
+        <option value="50">Medium (1-50)</option>
+        <option value="100" selected>Hard (1-100)</option>
+        <option value="500">Extreme (1-500)</option>
+      </select>
+    </div>
 
-    <div id="timerDisplay"></div>
+    <div class="input-section">
+      <input type="number" id="selectNum" placeholder="Enter a number" />
+      <button class="guessBtn">Guess</button>
+      <button id="hintBtn">💡 Hint</button>
+    </div>
 
-    <input type="number" id="selectNum" placeholder="Enter your guess..." />
-    <button class="guessBtn">Guess</button>
-    <button id="hintBtn">💡 Get Hint</button>
+    <p class="feedback"></p>
+    <p class="errors"></p>
+    <p id="timerDisplay"></p>
 
-    <div class="feedback"></div>
-    <div class="errors"></div>
+    <button id="toggleSound">🔊 Sound On</button>
+    <button id="showAnswer" style="display:none;">📢 Show Answer</button>
+
     <div class="popUp"></div>
     <div id="leaderboard"></div>
   </div>
 
-  <!-- Sound Effects -->
-  <audio id="correctSound" src="https://www.soundjay.com/button/beep-07.wav"></audio>
-  <audio id="wrongSound" src="https://www.soundjay.com/button/beep-10.wav"></audio>
+  <audio id="correctSound" src="sounds/correct.mp3" preload="auto"></audio>
+  <audio id="wrongSound" src="sounds/wrong.mp3" preload="auto"></audio>
 
-  <!-- JavaScript -->
-  <script src="./js/app.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
