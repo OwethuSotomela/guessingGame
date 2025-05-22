@@ -63,6 +63,7 @@ function giveHint() {
   else if (diff <= 10) hint = "🌡️ You're warm.";
   else hint = "🧊 Still cold...";
   feedbackElem.textContent = hint;
+  feedbackElem.className = "feedback";
 }
 
 function saveScore(score, timeTaken) {
@@ -78,6 +79,7 @@ function saveScore(score, timeTaken) {
 function game() {
   const userValue = parseInt(selectNum.value);
   errors.textContent = "";
+  feedbackElem.className = "feedback";
 
   if (isNaN(userValue)) {
     errors.textContent = "⚠️ Please enter a valid number.";
@@ -93,7 +95,7 @@ function game() {
   guessHistory.push(userValue);
 
   if (guessCount >= 10 && userValue !== randomNumber) {
-    feedbackElem.className = "feedback high";
+    feedbackElem.classList.add("high");
     feedbackElem.textContent = `❌ Game Over! The number was ${randomNumber}.`;
     wrongSound.play();
     selectNum.disabled = true;
@@ -104,21 +106,22 @@ function game() {
   }
 
   if (userValue > randomNumber) {
-    feedbackElem.className = "feedback high";
+    feedbackElem.classList.add("high");
     feedbackElem.textContent = "⬆️ Too high! Try again.";
     wrongSound.play();
   } else if (userValue < randomNumber) {
-    feedbackElem.className = "feedback low";
+    feedbackElem.classList.add("low");
     feedbackElem.textContent = "⬇️ Too low! Try again.";
     wrongSound.play();
   } else {
-    feedbackElem.className = "feedback correct";
+    feedbackElem.classList.add("correct");
     feedbackElem.textContent = `🎉 Correct! You guessed it in ${guessCount} attempts.`;
     correctSound.play();
     selectNum.disabled = true;
     guessBtn.disabled = true;
     hintBtn.disabled = true;
     stopTimer();
+
     const timeTaken = Math.floor((Date.now() - startTime) / 1000);
     saveScore(guessCount, timeTaken);
 
@@ -126,10 +129,11 @@ function game() {
       <button class="play-again">🔁 Play Again</button>
       <p><strong>Your guesses:</strong> ${guessHistory.join(', ')}</p>
     `;
+
     document.querySelector(".play-again").addEventListener("click", resetGame);
   }
 
-  selectNum.value = "";
+  selectNum.value = ""; // Clear input field after each guess
 }
 
 guessBtn.addEventListener("click", game);
