@@ -1,38 +1,61 @@
-# Guessing Game
+# 🎯 Number Guessing Game
 
 [Play Guessing-Game](https://owethusotomela.github.io/guessingGame/)
 
-Welcome to the Guessing Game! This is a simple web-based game where users can guess a number between 1 and 100.
+A sleek and fun web-based number guessing game with multiple difficulty levels, timer, hints, sound effects, leaderboard, dark theme, and mobile responsiveness. Built using HTML, CSS, and JavaScript.
 
-Features
+## 🔍 Features
 
-* Interactive Gameplay: Users can input their guesses and receive feedback on whether their guess is too high, too low, or correct.
-* User-Friendly Interface: The game provides clear instructions and visual cues to enhance the user experience.
-* Responsive Design: The game is designed to work seamlessly across various devices and screen sizes.
+- 🔢 Guess a number between 1 and 100 (or range selected)
+- 🎚️ Difficulty levels (Easy, Medium, Hard)
+- ⏱️ Live timer during gameplay
+- 💡 Smart hints after 3 incorrect guesses
+- 🔊 Sound feedback for correct and wrong answers
+- 🏆 Local leaderboard tracking best scores
+- 🌙 Dark theme for a clean UI experience
+- 🌍 Multi-language support (coming soon!)
+- 📱 Mobile-friendly and fully responsive design
 
-How to Play
+## 🛠️ Technologies Used
 
-1. Open the game in your web browser.
-2. Enter your guess in the input field provided.
-3. Click the "Play" button to submit your guess.
-4. Receive feedback on whether your guess is too high, too low, or correct.
-5. Keep guessing until you correctly guess the secret number!
+- HTML5
+- CSS3 (Flexbox & media queries)
+- JavaScript (Vanilla)
 
-Technologies Used
+## 📂 Project Structure
 
-* HTML5
-* CSS3
-* JavaScript
+📁 guessingGame
+├── index.html
+├── 📁 css
+│   └── style.css
+├── 📁 js
+│   └── app.js
+└── 📁 assets
+└── sounds (correctSound.mp3, wrongSound.mp3)
 
-Installation
+## 🚀 How to Play
 
-1. Clone the repository to your local machine.
-2. Open the index.html file in your web browser.
+1. Select a difficulty level.
+2. Enter your guess and click "Guess".
+3. Get feedback instantly—too high, too low, or correct!
+4. Use hints after a few tries if stuck.
+5. Try to beat your score and time on the leaderboard.
 
-Demo
+## 📸 Screenshots
 
-<ul> You can play the game live here (https://owethusotomela.github.io/guessingGame/) .</ul>
+![Gameplay Screenshot](./assets/screenshots/gameplay.png)
 
-Feedback
+## ✅ Future Improvements
 
-<ul> If you have any feedback or suggestions, please open an issue </ul>
+- 🌐 Multi-language toggle
+- 🎨 Theme switcher (light/dark/custom)
+- 📊 Score history & stats
+- 🧠 Smarter hints with ranges
+
+## 🙌 Credits
+
+Made with ❤️ by [Owethu Sotomela](https://github.com/OwethuSotomela)
+
+## 📄 License
+
+MIT License
