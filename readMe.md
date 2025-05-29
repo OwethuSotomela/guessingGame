@@ -1,6 +1,8 @@
 # 🎯 Number Guessing Game
 
-[Play Guessing-Game](https://owethusotomela.github.io/guessingGame/)
+🎮 Live Demo
+
+[Play](https://owethusotomela.github.io/guessingGame/)
 
 A sleek and fun web-based number guessing game with multiple difficulty levels, timer, hints, sound effects, leaderboard, dark theme, and mobile responsiveness. Built using HTML, CSS, and JavaScript.
 
